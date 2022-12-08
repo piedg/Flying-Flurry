@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4be8cc4384323419a38f499a12ae02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  JumpForce: 6
   <Score>k__BackingField: 0
   <IsDead>k__BackingField: 0
 --- !u!50 &221837513928366596
