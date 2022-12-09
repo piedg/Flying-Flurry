@@ -1,35 +1,39 @@
 using System.Collections;
 using UnityEngine;
 
-namespace FlyingFurry.Gameplay
+namespace FlyingFlurry.Gameplay
 {
     public class ObstacleSpawner : MonoBehaviour
     {
         [SerializeField] float MaxPosY;
         [SerializeField] float SpawnTime;
         [SerializeField] float Speed;
-
-        [SerializeField] ObjectPool ObstaclePool;
-
         [SerializeField] float TimeToDeactive;
 
-        private void Start()
-        {
-            StartCoroutine(SpawnObstacles());
-        }
+        public bool SpawnActive;
+
+        float spawnDelay;
+
+        [SerializeField] ObjectPool ObstaclePool;
 
         private void Update()
         {
             transform.Translate(Vector2.left * Speed * Time.deltaTime);
+
+            SpawnObstacles();
         }
 
-        IEnumerator SpawnObstacles()
+        void SpawnObstacles()
         {
-            while(true)
+            if (!SpawnActive) return;
+
+            spawnDelay -= Time.deltaTime;
+
+            if(spawnDelay <= 0)
             {
                 GameObject obstacles = ObstaclePool.GetObjectFromPool();
 
-                obstacles.transform.SetPositionAndRotation(new Vector2(10f, Random.Range(-MaxPosY, MaxPosY)), Quaternion.identity);
+                obstacles.transform.SetPositionAndRotation(new Vector2(5f, Random.Range(-MaxPosY, MaxPosY)), Quaternion.identity);
 
                 obstacles.transform.parent = transform;
 
@@ -40,9 +44,7 @@ namespace FlyingFurry.Gameplay
                     obstacles.transform.GetChild(i).gameObject.SetActive(true);
                 }
 
-                StartCoroutine(RemoveAfterSeconds(TimeToDeactive, obstacles));
-
-                yield return new WaitForSeconds(SpawnTime);
+                spawnDelay = SpawnTime;
             }
         }
 
@@ -50,6 +52,14 @@ namespace FlyingFurry.Gameplay
         {
             yield return new WaitForSeconds(seconds);
             obj.SetActive(false);
+        }
+
+        public void ResetObstacles()
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
         }
     }
 }

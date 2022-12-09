@@ -1,22 +1,29 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace FlyingFurry.Player
+namespace FlyingFlurry.Player
 {
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] float JumpForce;
-        [field: SerializeField] public int Score { get; private set; }
-        [field: SerializeField] public bool IsDead { get; private set; }
 
-        private Touch touch;
+        private bool isDead;
+        public bool IsDead { get { return isDead; } set { isDead = value; } }
+
+        Vector2 startPosition;
+
+        Touch touch;
         Rigidbody2D rb;
         Animator animator;
+
+        private int score;
+        public int Score { get { return score; } set { score = value; } }
 
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            startPosition = transform.position;
         }
 
         private void Update()
@@ -55,20 +62,26 @@ namespace FlyingFurry.Player
             animator.SetTrigger("Jump");
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(other.name);
-
             if (other.gameObject.CompareTag("Hazard"))
             {
-                IsDead = true;
+                isDead = true;
                 return;
             }
 
             if (other.gameObject.CompareTag("Collectable"))
             {
-                Score++;
+                score++;
             }
+        }
+
+        public void Respawn()
+        {
+            transform.position = startPosition;
+            rb.velocity = Vector2.zero;
+            score = 0;
+            isDead = false;
         }
     }
 }
