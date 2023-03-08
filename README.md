@@ -8,4 +8,4 @@ FlappyBird-Like game.
 ![flying_furry_AdobeExpress](https://user-images.githubusercontent.com/86517853/223841231-b9744bc2-4cdc-4e57-89e1-3f55f7537114.gif)
 
 ## UI 
-![Uploading Registrazione_schermo_2023-03-08_alle_21_30_54_AdobeExpress.gif…]()
+
