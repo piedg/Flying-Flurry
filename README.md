@@ -9,4 +9,4 @@ FlappyBird-Like game.
 
 ## UI 
 
-![flying_furry_AdobeExpress](https://github.com/piedg/Flying-Flurry/blob/main/Assets/Resources/ui.gif?raw=true)
+![flying_furry_AdobeExpress](https://github.com/piedg/Flying-Flurry/blob/main/Assets/Resources/ui.gif)
