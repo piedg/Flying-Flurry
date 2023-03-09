@@ -5,6 +5,8 @@
 FlappyBird-Like game.
 
 ## Gameplay
+You can use spacebar on keyboard, or tapping the screen on mobile devices, for perform a jump.
+
 ![flying_furry_AdobeExpress](https://user-images.githubusercontent.com/86517853/223841231-b9744bc2-4cdc-4e57-89e1-3f55f7537114.gif)
 
 ## UI 
