@@ -13,6 +13,6 @@ You can use spacebar on keyboard, or tapping the screen on mobile devices, for p
 
 ![flying_furry_AdobeExpress](https://github.com/piedg/Flying-Flurry/blob/main/Assets/Resources/ui.gif)
 
-## Knowing Bugs:
-No audio
+## Knowing Bugs
+No audio \n
 No Settings Screen
