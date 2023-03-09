@@ -2,7 +2,7 @@
 
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://www.unity.com)
 
-FlappyBird-Like game.
+Try this FlappyBird-Like game! https://hcyan.itch.io/flying-flurry
 
 ## Gameplay
 You can use spacebar on keyboard, or tapping the screen on mobile devices, for perform a jump.
