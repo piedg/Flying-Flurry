@@ -2,7 +2,9 @@
 
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://www.unity.com)
 
-Try this FlappyBird-Like game on itch.io! https://hcyan.itch.io/flying-flurry
+Try this FlappyBird-Like game on itch.io! 
+
+https://hcyan.itch.io/flying-flurry
 
 ## Gameplay
 You will have to collect more points as you can. <br> Perform jumps with the spacebar on the keyboard, or tapping the screen on mobile devices. <br> Avoid obstacles and don't fall down!
