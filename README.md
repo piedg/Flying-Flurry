@@ -12,3 +12,7 @@ You can use spacebar on keyboard, or tapping the screen on mobile devices, for p
 ## UI 
 
 ![flying_furry_AdobeExpress](https://github.com/piedg/Flying-Flurry/blob/main/Assets/Resources/ui.gif)
+
+## Knowing Bugs:
+No audio
+No Settings Screen
