@@ -16,3 +16,5 @@ You will have to collect more points as you can. <br> Perform jumps with the spa
 ## Knowing Bugs
 <p>No audio</p>
 <p>No Settings Screen</p>
+
+### Credits
